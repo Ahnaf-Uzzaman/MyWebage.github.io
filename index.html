@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>Signature</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        @font-face {
+            font-family: 'TransformaMix-Medium';
+            /* Name your font */
+            src: url('Fonts/TransformaMix-Medium.ttf') format('truetype');
+            /* Path to the .ttf file */
+        }
+
+        @font-face {
+            font-family: 'Hertine';
+            /* Name your font */
+            src: url('Fonts/Hertine.ttf') format('truetype');
+            /* Path to the .ttf file */
+        }
+
+        @font-face {
+            font-family: 'Made';
+            /* Name your font */
+            src: url('Fonts/MADE TOMMY Light_PERSONAL USE.otf') format('truetype');
+            /* Path to the .ttf file */
+        }
+
+        @font-face {
+            font-family: 'Made2';
+            /* Name your font */
+            src: url('Fonts/MADE TOMMY Bold_PERSONAL USE.otf') format('truetype');
+            /* Path to the .ttf file */
+        }
+
+        .container {
+            width: 720px;
+            height: 300px;
+            background-image: url('');
+            background-color: #E9E9E0;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            /* Adjust the shadow as needed */
+            margin: 50px 50px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            /* To make positioning the inner box relative to the container */
+        }
+
+        .container img {
+            width: 100%;
+            /* Make the image width fit the div */
+            height: 100%;
+            /* Make the image height fit the div */
+            object-fit: cover;
+        }
+
+        .inner-box {
+            position: absolute;
+            top: 50%;
+            /* Aligns the top of the inner box to the middle of the container */
+            right: 0;
+            /* Aligns the right side of the inner box to the right side of the container */
+            transform: translateY(-50%);
+            /* Centers the inner box vertically */
+            width: 5%;
+            /* 20% of the container width */
+            height: 168px;
+            background-color: #E9E9E0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 14px 0 0 14px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            color: #E9E9E0;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        .social-link i {
+            font-size: 12px;
+            margin-right: 10px;
+            background-color: #1A1D24;
+            color: #E9E9E0;
+            border-radius: 50%;
+        }
+
+        .bottom-text {
+            position: absolute;
+            width: 450px;
+            height: 50px;
+            bottom: 0px;
+            left: 40%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        /*.bottom-line {
+            position: absolute;
+            bottom: 23px;
+            left: 20px;
+            width: 42%;
+            height: 1.4px;
+            background-color: #FFAF9C;
+        }*/
+
+        .bottom-text p {
+            position: absolute;
+            font-size: 15px;
+            right: 50px;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .bottom-line8 {
+            position: absolute;
+            width: 60px;
+            height: 8px;
+            top: 48.6%;
+            left: 140px;
+            color: #fff;
+            animation: text-rotation 8s linear infinite;
+
+            >span {
+                position: absolute;
+                transform: rotate(calc(19deg * var(--index)));
+                inset: 63px;
+            }
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(0) rotate(0);
+
+            }
+
+            100% {
+                transform: translateY(0) rotate(180deg);
+
+            }
+        }
+        
+        .round-image {
+            position: absolute;
+            top: 50%;
+            left: 170px;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-image: url('image/img2.jpg');
+            /* Replace 'your_image.jpg' with your image URL */
+            background-size: cover;
+        }
+
+        .circle-line {
+            position: absolute;
+            top: 50%;
+            left: 170px;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        /*.bottom-line2 {
+    position: absolute;
+    top: 260px;
+    left: 0px;
+    width: 60px;
+    height: 8px;
+    background-color: #FFAF9C;
+}
+*/
+        .bottom-line3 {
+            position: absolute;
+            top: 25px;
+            transform: translateX(-50%);
+            left: 45%;
+            width: 10%;
+            height: 1.4px;
+            background-color: #FFAF9C;
+        }
+
+        .bottom-line4 {
+            position: absolute;
+            top: 0px;
+            left: 19px;
+            width: 8px;
+            height: 300px;
+            background-color: #fff;
+        }
+
+        .bottom-line5 {
+            position: absolute;
+            bottom: 25px;
+            left: 70px;
+            color: #42797E;
+            animation: jump 3s linear infinite alternate;
+        }
+
+        .bottom-line6 {
+            position: absolute;
+            top: 25px;
+            left: 70px;
+            color: #E8785C;
+            animation: jump 3s linear infinite alternate;
+        }
+
+        .bottom-line7 {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            font-family: "Made";
+            animation: shine 2s linear infinite alternate;
+        }
+
+        .btn-shine {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: #fff;
+            background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+            background-position: 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            font-weight: bold;
+            font-size: 12px;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: "made";
+        }
+
+        @-moz-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 150px;
+            }
+
+            100% {
+                background-position: 150px;
+            }
+        }
+
+        @-webkit-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 150px;
+            }
+
+            100% {
+                background-position: 150px;
+            }
+        }
+
+        @-o-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 150px;
+            }
+
+            100% {
+                background-position: 150px;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 150px;
+            }
+
+            100% {
+                background-position: 150px;
+            }
+        }
+
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+
+            }
+
+            100% {
+                transform: translateX(6px);
+            }
+        }
+
+        @keyframes text-rotation {
+            to {
+                rotate: 360deg;
+            }
+        }
+
+        .center-text {
+            text-align: left;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(0%, -50%);
+            font-size: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .center-text h2 {
+            color: #E9E9E0;
+        }
+
+        .center-text p {
+            margin: 7px 0;
+            color: #E9E9E0;
+        }
+
+        .info {
+            color: #42797E;
+            margin-bottom: 10px;
+        }
+
+        .circle {
+            color: #E00;
+            margin-right: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <img src="image/cover2.jpg" alt="">
+        <!-- Your content goes here -->
+        <div class="inner-box">
+            <a href="https://www.facebook.com/profile.php?id=100050861948359&mibextid=ZbWKwL" class="social-link">
+                <i style="padding: 3px 5.3px;" class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/mrahnafgfx?igsh=MTRmd3loOWdmNGo4Zw==" class="social-link">
+                <i style="padding: 3px 3.8px;" class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/MrAhnafGFX" class="social-link">
+                <i style="padding: 3px;" class="fab fa-twitter"></i>
+            </a>
+        </div>
+      
+        <div class="bottom-line2"></div>
+        <!--<div class="bottom-line3"></div> -->
+        <!--<div class="bottom-line4"></div>-->
+        <!--<div class="bottom-line5">╳</div> -->
+        <!--<div class="bottom-line6">╳</div> -->
+        <div onclick="openLinkedIn()" class="btn-shine">SEE MORE</div>
+
+
+        <div class="bottom-text">
+            <div class="bottom-line"></div>
+            <p style="font-family: 'Hertine'; font-weight: 550;">Web Designer</p>
+        </div>
+
+        <div class="img-frame">
+            <div class="bottom-line8"><span>⬤</span></div>
+            <div class="round-image"></div>
+            <div class="circle-line"></div>
+        </div>
+
+        <div class="center-text">
+            <p style="font-size: 37px; color: #E9E9E0;"><span style="font-weight: bold;">AHNAF</span> UZZAMAN</p>
+            <p style="margin-bottom: 30px; font-family: 'made', sans-serif; font-size: 15px; font-weight: bold;">Article Writer and Designer</p>
+            <p class="info"><span class="circle">‣</span><span style="color: #fff; font-family: 'made'; font-weight: bold; letter-spacing: 1px; margin-left: 3px; ">PHONE: </span><span id="phone" style="color: #fff;">+880-13093-44050</span></p>
+            <p class="info"><span class="circle">‣</span><span style="color: #fff; font-family: 'made'; font-weight: bold; letter-spacing: 1px; margin-left: 3px; ">E-MAIL: </span><span id="email" style="color: #fff;">ahnaf.programming@gmail.com</span></p>
+            <p class="info"><span class="circle">‣</span><span style="color: #fff; font-family: 'made'; font-weight: bold; letter-spacing: 1px; margin-left: 3px; ">ADDRESS: </span><span style="color: #fff;">Rd.Islampur, Dhaka South 1100, BD</span></p>
+        </div>
+    </div>
+
+    <script>
+        //email button 
+        document.getElementById('email').addEventListener('click', function() {
+            window.location.href = 'mailto:ahnaf.programming@gmail.com';
+        });
+        //call button 
+        document.getElementById('phone').addEventListener('click', function() {
+            window.location.href = 'tel:your_phone_number';
+        });
+
+        function openLinkedIn() {
+            window.open("https://bd.linkedin.com/in/ahnafuzzaman?trk=profile-badge", "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
+<!-- ╳ ⬤ » ‣ --!
