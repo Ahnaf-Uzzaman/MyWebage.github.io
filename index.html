@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
@@ -403,7 +404,7 @@
             <p class="info"><span class="circle">‣</span><span style="color: #fff; font-family: 'made'; font-weight: bold; letter-spacing: 1px; margin-left: 3px; ">ADDRESS: </span><span style="color: #fff;">Rd.Islampur, Dhaka South 1100, BD</span></p>
         </div>
     </div>
-
+    <p>© 2024 Ahnaf Uzzaman. All rights reserved. Unauthorized copying of this content is prohibited.</p>
     <script>
         //email button 
         document.getElementById('email').addEventListener('click', function() {
@@ -417,6 +418,17 @@
         function openLinkedIn() {
             window.open("https://bd.linkedin.com/in/ahnafuzzaman?trk=profile-badge", "_blank");
         }
+
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', (e) => {
+        e.preventDefault();
+        });
+        
     </script>
 
 </body>
